@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' https://image.tmdb.org https://placehold.co; media-src 'self' https://naedist.animemusicquiz.com;">
+    <title>Anime Pilgrimage Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Kaisei+Tokumin:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #fdf2f2;
+            background-image:
+                radial-gradient(circle at 100% 150%, #fdf2f2 24%, #fff 25%, #fff 28%, #fdf2f2 29%, #fdf2f2 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 0 150%, #fdf2f2 24%, #fff 25%, #fff 28%, #fdf2f2 29%, #fdf2f2 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 50% 100%, #fff 10%, #fdf2f2 11%, #fdf2f2 23%, #fff 24%, #fff 30%, #fdf2f2 31%, #fdf2f2 43%, #fff 44%, #fff 50%, #fdf2f2 51%, #fdf2f2 63%, #fff 64%, #fff 71%, transparent 71%, transparent),
+                radial-gradient(circle at 100% 50%, #fff 5%, #fdf2f2 6%, #fdf2f2 15%, #fff 16%, #fff 20%, #fdf2f2 21%, #fdf2f2 35%, #fff 36%, #fff 43%, #fdf2f2 44%, #fdf2f2 55%, #fff 56%, #fff 65%, transparent 65%, transparent),
+                radial-gradient(circle at 0 50%, #fff 5%, #fdf2f2 6%, #fdf2f2 15%, #fff 16%, #fff 20%, #fdf2f2 21%, #fdf2f2 35%, #fff 36%, #fff 43%, #fdf2f2 44%, #fdf2f2 55%, #fff 56%, #fff 65%, transparent 65%, transparent);
+            background-size: 100px 50px;
+        }
+        .font-jp { font-family: 'Kaisei Tokumin', serif; }
+        .step-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid #FECDD3;
+            border-radius: 1.5rem; /* Increased border radius for a softer look */
+            box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .step-card:hover {
+            box-shadow: 0 12px 24px -6px rgb(0 0 0 / 0.08);
+            transform: translateY(-2px);
+        }
+        .btn-primary { background-color: #EC4899; color: white; transition: all 0.3s; }
+        .btn-primary:hover { background-color: #DB2777; box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4); }
+        .btn-primary:disabled { background-color: #9CA3AF; cursor: not-allowed; }
+        .btn-option { background-color: white; border: 1px solid #FECDD3; color: #44403C; transition: all 0.2s; }
+        .btn-option:hover { border-color: #F9A8D4; background-color: #FFF1F2; transform: translateY(-2px); }
+        .btn-option.selected { background-color: #EC4899; color: white; border-color: #EC4899; font-weight: 700; }
+        .anime-card { border: 2px solid transparent; transition: all 0.2s; cursor: pointer; background-color: #ffffff; }
+        .anime-card:hover { border-color: #F9A8D4; transform: scale(1.03); }
+        .anime-card.selected { border-color: #EC4899; box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.5); transform: scale(1.03); }
+        .chart-container { position: relative; width: 100%; max-width: 450px; margin: auto; height: 300px; max-height: 40vh; }
+        .torii { position: relative; width: 150px; height: 120px; margin: 1rem auto 0; }
+        .torii-beam { position: absolute; background-color: #BE123C; height: 12px; border-radius: 5px; }
+        .torii-beam-top { width: 100%; top: 0; left: 0; }
+        .torii-beam-bottom { width: 80%; top: 25px; left: 10%; }
+        .torii-post { position: absolute; background-color: #BE123C; width: 12px; height: 120px; top: 0; transform-origin: top center; border-radius: 5px; }
+        .torii-post-left { left: 15%; transform: rotate(-5deg); }
+        .torii-post-right { right: 15%; transform: rotate(5deg); }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #EC4899; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 2rem auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem; /* 16px */
+            margin-bottom: 1rem; /* 16px */
+        }
+        .step-number {
+            flex-shrink: 0;
+            background-image: linear-gradient(to right, #f9a8d4, #ec4899);
+            color: white;
+            border-radius: 9999px;
+            height: 2.5rem; /* 40px */
+            width: 2.5rem; /* 40px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.125rem; /* 18px */
+            box-shadow: 0 4px 8px rgba(236, 72, 153, 0.3);
+        }
+    </style>
+</head>
+<body class="text-stone-800">
+
+    <header class="py-6 text-center">
+        <div class="torii">
+            <div class="torii-beam torii-beam-top"></div>
+            <div class="torii-beam torii-beam-bottom"></div>
+            <div class="torii-post torii-post-left"></div>
+            <div class="torii-post torii-post-right"></div>
+        </div>
+        <h1 class="text-4xl font-bold text-stone-900 font-jp mt-4">アニメ聖地巡礼プランナー</h1>
+        <p class="text-lg text-stone-600 mt-2">Anime Pilgrimage Planner</p>
+    </header>
+
+    <main class="container mx-auto px-4 pb-12 max-w-7xl">
+        <div class="space-y-8">
+            <section id="step1-city" class="step-card p-6 md:p-8">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h2 class="text-2xl font-bold">Select Pilgrimage City</h2>
+                </div>
+                <p class="text-stone-600 mb-6">First, please select the city in Japan you plan to visit. This will determine which anime pilgrimage routes we can plan for you.</p>
+                <div id="city-selection-container" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                </div>
+            </section>
+
+            <section id="step2-selection" class="step-card p-6 md:p-8 hidden">
+                <div class="step-header">
+                     <div class="step-number">2</div>
+                    <h2 class="text-2xl font-bold">Select Style & Anime</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3">Travel Style</h3>
+                    <p class="text-stone-600 mb-4">Choose your travel preference. We will intelligently filter locations and optimize the budget for you.</p>
+                    <div id="style-selection-container" class="flex flex-wrap gap-3">
+                        <button data-style="budget" class="btn-option font-semibold py-2 px-4 rounded-full">「節約」 Budget</button>
+                        <button data-style="balanced" class="btn-option font-semibold py-2 px-4 rounded-full selected">「標準」 Balanced</button>
+                        <button data-style="luxury" class="btn-option font-semibold py-2 px-4 rounded-full">「豪華」 Luxury</button>
+                    </div>
+
+                    <div class="mt-4 p-4 bg-white/70 border border-pink-100 rounded-lg text-sm text-stone-600">
+                        <ul class="space-y-2">
+                            <li><strong>Budget:</strong> Filters for free-entry locations (¥0 fee) only. Estimates daily food at ~¥2,000 and accommodation at ~¥5,000.</li>
+                            <li><strong>Balanced:</strong> Includes all locations (free and paid). Estimates daily food at ~¥3,500 and accommodation at ~¥10,000.</li>
+                            <li><strong>Luxury:</strong> Prioritizes paid-entry locations. Estimates daily food at ~¥6,000 and accommodation at ~¥20,000.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Pilgrimage Anime</h3>
+                    <p class="text-stone-600 mb-4">Below are the available anime for pilgrimage in <strong id="selected-city-name" class="text-pink-600"></strong>. Please select one or more that you're interested in.</p>
+                    <div id="anime-selection-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button id="generate-btn" class="btn-primary font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none disabled:transform-none" disabled>
+                        🌸 Generate My Itinerary
+                    </button>
+                </div>
+            </section>
+
+            <section id="step3-itinerary" class="step-card p-6 md:p-8 hidden">
+                <div id="loader-container" class="text-center"></div>
+                <div id="error-container"></div>
+                
+                <div id="itinerary-results-container">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h2 class="text-2xl font-bold">Your Custom Itinerary & Analysis</h2>
+                    </div>
+                    <p class="text-stone-600 mb-8">Based on your selections, we have generated the following personalized itinerary plan. It includes daily routes, budget analysis, and location type distribution to help you better plan your trip!</p>
+                    
+                    <div id="itinerary-output">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+<script>
+// Global state management
+const appState = {
+    selectedCity: null,
+    travelStyle: 'balanced',
+    selectedAnime: [],
+    apiBaseUrl: 'http://localhost:8001',
+};
+
+// Chart instances
+let costChartInstance = null;
+let typeChartInstance = null;
+
+// DOM element references
+const dom = {
+    cityContainer: document.getElementById('city-selection-container'),
+    styleContainer: document.getElementById('style-selection-container'),
+    animeContainer: document.getElementById('anime-selection-container'),
+    selectedCityName: document.getElementById('selected-city-name'),
+    generateBtn: document.getElementById('generate-btn'),
+    step2Section: document.getElementById('step2-selection'),
+    step3Section: document.getElementById('step3-itinerary'),
+    itineraryOutput: document.getElementById('itinerary-output'),
+    itineraryResultsContainer: document.getElementById('itinerary-results-container'),
+    loaderContainer: document.getElementById('loader-container'),
+    errorContainer: document.getElementById('error-container'),
+    audioPlayer: new Audio()
+};
+
+const locationIcons = {
+    'Outdoor Attraction': `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.881 4.122A.5.5 0 018.5 4h7a.5.5 0 01.419.223l.667 1.334a.5.5 0 010 .444l-.667 1.334A.5.5 0 0115.5 8h-7a.5.5 0 01-.419-.223L7.414 6.444a.5.5 0 010-.444l.467-.934z" /></svg>`,
+    'Commercial Area': `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>`,
+    'Landmark Building': `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>`,
+    'Temple': `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>`,
+    'Shrine': `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>`,
+    'Park': `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+    'Default': `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>`
+};
+
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+    initCitySelection();
+    initStyleSelection();
+    dom.generateBtn.addEventListener('click', handleGenerateItinerary);
+});
+
+// --- API Call Functions ---
+async function fetchCities() {
+    try {
+        const response = await fetch(`${appState.apiBaseUrl}/api/cities`);
+        if (!response.ok) throw new Error(`Server error: ${response.statusText}`);
+        const data = await response.json();
+        return data.success ? data.cities : [];
+    } catch (error) {
+        showError(dom.cityContainer, `Failed to load cities: ${error.message}`);
+        return [];
+    }
+}
+
+async function fetchAnimeForCity(city) {
+    showLoader(dom.animeContainer, 'Loading anime...');
+    try {
+        const response = await fetch(`${appState.apiBaseUrl}/api/anime/${city}`);
+        if (!response.ok) throw new Error(`Server error: ${response.statusText}`);
+        const data = await response.json();
+        if (data.success) return data.anime;
+        throw new Error(data.error || `Could not load the anime list for ${city}.`);
+    } catch (error) {
+        showError(dom.animeContainer, `Failed to load anime: ${error.message}`);
+        return [];
+    }
+}
+
+async function postGenerateItinerary() {
+    showLoader(dom.loaderContainer, 'Generating your custom itinerary, please wait...');
+    dom.itineraryResultsContainer.classList.add('hidden');
+    try {
+        const payload = {
+            city: appState.selectedCity,
+            anime: appState.selectedAnime,
+            style: appState.travelStyle,
+        };
+        const response = await fetch(`${appState.apiBaseUrl}/api/generate-itinerary`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        });
+        if (!response.ok) throw new Error(`Generation failed: ${response.statusText}`);
+        const data = await response.json();
+        if (data.success) return data.itinerary;
+        throw new Error(data.error || 'An unknown error occurred while generating the itinerary.');
+    } catch (error) {
+        showGlobalError(`Failed to generate itinerary: ${error.message}`);
+        return null;
+    } finally {
+        hideLoader(dom.loaderContainer);
+    }
+}
+
+// --- UI Rendering and Update Functions ---
+async function initCitySelection() {
+    const cities = await fetchCities();
+    dom.cityContainer.innerHTML = '';
+    cities.forEach(city => {
+        const button = document.createElement('button');
+        button.dataset.city = city.name;
+        button.className = 'btn-option font-semibold py-3 px-4 rounded-lg text-center flex flex-col items-center justify-center gap-2 h-24';
+        button.innerHTML = `<span class="text-3xl">${city.icon}</span><span>${city.name}</span>`;
+        button.addEventListener('click', () => handleCitySelect(button.dataset.city));
+        dom.cityContainer.appendChild(button);
+    });
+}
+
+function initStyleSelection() {
+    dom.styleContainer.addEventListener('click', (e) => {
+        const button = e.target.closest('button');
+        if (button) {
+            appState.travelStyle = button.dataset.style;
+            dom.styleContainer.querySelectorAll('button').forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
+        }
+    });
+}
+
+async function populateAnimeForCity(city) {
+    const animeList = await fetchAnimeForCity(city);
+    hideLoader(dom.animeContainer);
+    if (!animeList) return;
+    
+    dom.animeContainer.innerHTML = '';
+    
+    if (animeList.length === 0) {
+        showError(dom.animeContainer, `No anime found for ${city}.`);
+        return;
+    }
+    
+    animeList.forEach(anime => {
+        const card = document.createElement('div');
+        card.className = 'anime-card rounded-lg overflow-hidden shadow-md';
+        card.dataset.animeName = anime.anime_name;
+
+        const imageUrl = anime.image_url ? anime.image_url : 'https://placehold.co/400x600/fecdd3/be123c?text=?';
+
+        card.innerHTML = `
+            <div class="relative group">
+                <img src="${imageUrl}" alt="${anime.anime_name_en}" class="w-full aspect-[2/3] object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x600/fecdd3/be123c?text=Error';">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all flex items-center justify-center">
+                    <svg class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                </div>
+                <div class="anime-card-checkbox absolute top-2 left-2 w-6 h-6 border-2 bg-white/50 border-pink-300 rounded-md flex-shrink-0 flex items-center justify-center transition-all"></div>
+            </div>
+            <div class="p-3 bg-white">
+                <span class="font-semibold text-sm block truncate" title="${anime.anime_name}">${anime.anime_name}</span>
+                <span class="text-xs text-stone-500 block truncate" title="${anime.anime_name_en}">${anime.anime_name_en}</span>
+            </div>
+        `;
+        card.addEventListener('click', () => handleAnimeSelect(card, anime.anime_name));
+
+        const songUrl = anime.song_url;
+        if (songUrl) {
+            card.addEventListener('mouseenter', () => {
+                dom.audioPlayer.src = songUrl;
+                dom.audioPlayer.play().catch(e => {});
+            });
+            card.addEventListener('mouseleave', () => dom.audioPlayer.pause());
+        }
+        
+        dom.animeContainer.appendChild(card);
+    });
+}
+
+
+function renderItinerary(itinerary) {
+    if (!itinerary) return;
+
+    dom.itineraryResultsContainer.classList.remove('hidden');
+
+    if (!itinerary.hasContent) {
+        dom.itineraryOutput.innerHTML = `<div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-md" role="alert">
+            <p class="font-bold">No Results Found</p>
+            <p>${itinerary.message || 'Based on your selections, no suitable pilgrimage sites were found. Please try a different travel style or anime combination.'}</p>
+        </div>`;
+        return;
+    }
+
+    const duration = itinerary.days.length;
+    const durationText = `${duration} ${duration === 1 ? 'Day' : 'Days'}`;
+    const siteCount = itinerary.days.reduce((acc, day) => acc + day.locations.length, 0);
+    const siteCountText = `${siteCount} ${siteCount === 1 ? 'Site' : 'Sites'}`;
+    
+    let html = `<div class="bg-white/70 p-6 rounded-2xl border border-pink-100 shadow-sm mb-8">
+        <h3 class="text-xl font-bold text-center mb-6 text-stone-800">Itinerary Overview</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="p-4 bg-pink-50 rounded-xl">
+                <div class="text-sm text-pink-800 font-semibold mb-1">Estimated Total Cost</div>
+                <div class="text-3xl font-bold text-pink-600">¥${itinerary.totalCost.toLocaleString()}</div>
+            </div>
+            <div class="p-4 bg-teal-50 rounded-xl">
+                <div class="text-sm text-teal-800 font-semibold mb-1">Trip Duration</div>
+                <div class="text-3xl font-bold text-teal-600">${durationText}</div>
+            </div>
+            <div class="p-4 bg-sky-50 rounded-xl">
+                <div class="text-sm text-sky-800 font-semibold mb-1">Pilgrimage Sites</div>
+                <div class="text-3xl font-bold text-sky-600">${siteCountText}</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
+        <div class="lg:col-span-3 bg-white/70 p-6 rounded-2xl border border-pink-100 shadow-sm">
+            <h3 class="text-xl font-bold text-center mb-4">Cost Composition Analysis</h3>
+            <div class="chart-container"><canvas id="cost-chart"></canvas></div>
+        </div>
+        <div class="lg:col-span-2 bg-white/70 p-6 rounded-2xl border border-pink-100 shadow-sm">
+            <h3 class="text-xl font-bold text-center mb-4">Location Type Distribution</h3>
+            <div class="chart-container"><canvas id="type-chart"></canvas></div>
+        </div>
+    </div>`;
+
+    itinerary.days.forEach(day => {
+        const optimizationNote = day.optimizationNote ? `<span class="ml-2 text-xs font-medium text-white bg-teal-500 px-2 py-0.5 rounded-full">${day.optimizationNote}</span>` : '';
+        html += `
+        <div class="mb-6 bg-white/70 p-6 rounded-2xl border border-pink-100 shadow-sm">
+            <div class="border-b-2 border-pink-200 border-dashed pb-4 mb-4">
+                <h4 class="text-xl font-bold">Day ${day.day}: ${day.area} Exploration</h4>
+                <div class="flex items-center flex-wrap gap-x-4 text-stone-600 mt-3 text-sm">
+                    <span><strong class="text-pink-600">Cost for the Day: ¥${day.totalCost.toLocaleString()}</strong></span>
+                    <span>🎫 Entry Fee: ¥${day.entryFee.toLocaleString()}</span>
+                    <span>🚌 Transport: ¥${day.transportFee.toLocaleString()}${optimizationNote}</span>
+                    <span>🍜 Food: ¥${day.foodCost.toLocaleString()}</span>
+                    <span>🏨 Accommodation: ¥${day.accommodationCost.toLocaleString()}</span>
+                </div>
+            </div>
+            <div class="space-y-4">
+        `;
+        day.locations.forEach(loc => {
+            const icon = locationIcons[loc.location_type] || locationIcons['Default'];
+            html += `
+                <div class="flex items-start gap-4 p-4 bg-pink-50/70 rounded-lg transition-all hover:bg-white hover:shadow-md">
+                    <div class="flex-shrink-0 text-pink-500 mt-1">${icon}</div>
+                    <div>
+                        <p class="font-semibold text-lg text-stone-800">${loc.name}</p>
+                        <p class="text-xs text-stone-500 mb-2 font-medium bg-pink-100 inline-block px-2 py-0.5 rounded-full">From: ${loc.source_anime}</p>
+                        <p class="text-stone-700 text-sm">${loc.description}</p>
+                    </div>
+                </div>
+            `;
+        });
+        html += `</div></div>`;
+    });
+    dom.itineraryOutput.innerHTML = html;
+    renderCharts(itinerary);
+}
+
+function renderCharts(itinerary) {
+    const costCtx = document.getElementById('cost-chart').getContext('2d');
+    const typeCtx = document.getElementById('type-chart').getContext('2d');
+    
+    const colorPalette = [
+        'rgba(236, 72, 153, 0.7)', // Pink
+        'rgba(20, 184, 166, 0.7)', // Teal
+        'rgba(245, 158, 11, 0.7)', // Amber
+        'rgba(139, 92, 246, 0.7)', // Violet
+        'rgba(59, 130, 246, 0.7)', // Blue
+        'rgba(239, 68, 68, 0.7)'   // Red
+    ];
+    const borderPalette = [
+        'rgba(219, 39, 119, 1)',
+        'rgba(15, 118, 110, 1)',
+        'rgba(217, 119, 6, 1)',
+        'rgba(124, 58, 237, 1)',
+        'rgba(37, 99, 235, 1)',
+        'rgba(220, 38, 38, 1)'
+    ];
+
+    if (costChartInstance) costChartInstance.destroy();
+    costChartInstance = new Chart(costCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Total Entry Fees', 'Total Transport', 'Total Food Cost', 'Total Accommodation'],
+            datasets: [{
+                label: 'Cost Composition',
+                data: [itinerary.totalEntryFee, itinerary.totalTransportFee, itinerary.totalFoodCost, itinerary.totalAccommodationCost],
+                backgroundColor: ['#EC4899', '#14B8A6', '#F59E0B', '#8B5CF6'],
+                borderColor: '#fff',
+                borderWidth: 4,
+                hoverOffset: 8
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { position: 'bottom', labels: { padding: 20 } }, tooltip: { callbacks: { label: ctx => ` ¥${ctx.parsed.toLocaleString()}` } } }
+        }
+    });
+
+    if (typeChartInstance) typeChartInstance.destroy();
+    typeChartInstance = new Chart(typeCtx, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(itinerary.locationTypes),
+            datasets: [{
+                label: 'Number of Locations',
+                data: Object.values(itinerary.locationTypes),
+                backgroundColor: colorPalette,
+                borderColor: borderPalette,
+                borderWidth: 1,
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: { x: { beginAtZero: true, ticks: { stepSize: 1 } } }
+        }
+    });
+}
+
+// --- Event Handlers ---
+function handleCitySelect(city) {
+    appState.selectedCity = city;
+    appState.selectedAnime = [];
+    
+    dom.cityContainer.querySelectorAll('button').forEach(btn => btn.classList.toggle('selected', btn.dataset.city === city));
+    dom.selectedCityName.textContent = city;
+    dom.generateBtn.disabled = true;
+    
+    populateAnimeForCity(city);
+
+    dom.step2Section.classList.remove('hidden');
+    dom.step3Section.classList.add('hidden');
+    
+    window.scrollTo({ top: dom.step2Section.offsetTop - 20, behavior: 'smooth' });
+}
+
+function handleAnimeSelect(card, animeName) {
+    const isSelected = card.classList.toggle('selected');
+    const checkbox = card.querySelector('.anime-card-checkbox');
+    if (checkbox) {
+        checkbox.innerHTML = isSelected ? '<span class="text-pink-500 font-bold text-xl">✓</span>' : '';
+    }
+    if (isSelected) {
+        appState.selectedAnime.push(animeName);
+    } else {
+        appState.selectedAnime = appState.selectedAnime.filter(name => name !== animeName);
+    }
+    dom.generateBtn.disabled = appState.selectedAnime.length === 0;
+}
+
+async function handleGenerateItinerary() {
+    clearError();
+    if (!appState.selectedCity || appState.selectedAnime.length === 0) {
+        showGlobalError('Please select at least one city and one anime.');
+        return;
+    }
+    
+    dom.step3Section.classList.remove('hidden');
+    window.scrollTo({ top: dom.step3Section.offsetTop - 20, behavior: 'smooth' });
+    
+    const itinerary = await postGenerateItinerary();
+    renderItinerary(itinerary);
+}
+
+// --- UI Helper Functions ---
+function showLoader(container, message = 'Loading...') {
+    container.innerHTML = `<div class="text-center p-4"><div class="loader inline-block"></div><p class="text-stone-500">${message}</p></div>`;
+}
+
+function hideLoader(container) {
+    const loaderElement = container.querySelector('.text-center');
+    if (loaderElement) loaderElement.remove();
+}
+
+function showError(container, message) {
+    container.innerHTML = `<div class="text-red-600 bg-red-100 p-4 rounded-lg">${message}</div>`;
+}
+
+function showGlobalError(message) {
+    dom.errorContainer.innerHTML = `<div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-md mb-6" role="alert">
+        <p class="font-bold">An Error Occurred</p>
+        <p>${message}</p>
+    </div>`;
+    dom.itineraryResultsContainer.classList.add('hidden');
+}
+
+function clearError() {
+    dom.errorContainer.innerHTML = '';
+}
+</script>
+
+</body>
+</html>
+

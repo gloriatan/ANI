@@ -1,0 +1,941 @@
+{
+  "pilgrimages": [
+    {
+      "anime_name": "君の名は。",
+      "anime_name_en": "Your Name.",
+      "locations": [
+        {
+          "name": "須賀神社 階段 | Suga Shrine Stairs",
+          "city": "Tokyo",
+          "area": "Shinjuku Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where Mitsuha and Taki meet across time and space during the 'Twilight Moment'—the scene where their fingertips touch but they fail to recognize each other, serving as the core embodiment of the 'searching for one another' theme."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/mq0b2a.mp3"
+    },
+    {
+      "anime_name": "呪術廻戦",
+      "anime_name_en": "Jujutsu Kaisen",
+      "locations": [
+        {
+          "name": "渋谷PARCO周辺 地下モール | Shibuya PARCO Surrounding Underground Mall",
+          "city": "Tokyo",
+          "area": "Shibuya Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The key battlefield where Yuji Itadori and Megumi Fushuro team up for the first time to fight the 'Cursed Spirit Group'; Megumi summons the 'Divine Dogs' to protect passersby here."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/9zr4jm.mp3"
+    },
+    {
+      "anime_name": "攻殻機動隊",
+      "anime_name_en": "Ghost in the Shell",
+      "locations": [
+        {
+          "name": "お台場海浜公園 人工島 | Odaiba Seaside Park Artificial Island",
+          "city": "Tokyo",
+          "area": "Minato Ward",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The location where Motoko Kusanagi has her first conversation with the 'Puppet Master'; the metallic texture of the artificial island and the reflection of the sea echo the core theme of 'human-machine boundaries.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/9gC88zYUBARRSThcG93MvW14sqx.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/gcq3ti.mp3"
+    },
+    {
+      "anime_name": "天気の子",
+      "anime_name_en": "Weathering with You",
+      "locations": [
+        {
+          "name": "高田馬場公園 桜並木 | Takadanobaba Park Cherry Grove",
+          "city": "Tokyo",
+          "area": "Shinjuku Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where Hodaka and Hina first agree to 'change the weather together'; Hina reveals her 'Sunshine Girl' ability as cherry blossoms fall, marking the starting point of their growing bond."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/qgrk7r1fV4IjuoeiGS5HOhXNdLJ.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/wspvn2.mp3"
+    },
+    {
+      "anime_name": "新世紀エヴァンゲリオン",
+      "anime_name_en": "Neon Genesis Evangelion",
+      "locations": [
+        {
+          "name": "東京都庁舎 北展望室 | Tokyo Metropolitan Government Building North Observatory",
+          "city": "Tokyo",
+          "area": "Shinjuku Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Landmark Building",
+          "description": "The prototype of NERV's 'ground reception area'; the key scene where Shinji Ikari meets Misato Katsuragi for the first time and is told his mission to 'pilot the Eva.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/y2ah9t0navXyIvoHg1uIbIHO3tt.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/4pdfza.mp3"
+    },
+    {
+      "anime_name": "秒速5センチメートル",
+      "anime_name_en": "5 Centimeters per Second",
+      "locations": [
+        {
+          "name": "調布市多摩川河川敷 | Chofu City Tama River Bank",
+          "city": "Tokyo",
+          "area": "Chofu City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The location where Takaki and Akari pass each other for the last time as adults; the scene of a train separating them has become a classic symbol of 'youthful regret.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/dFipUR6W0y3PPkuVS8gjFd929m2.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/nqyfn6.mp3"
+    },
+    {
+      "anime_name": "俺の妹がこんなに可愛いわけがない",
+      "anime_name_en": "My Little Sister Can't Be This Cute",
+      "locations": [
+        {
+          "name": "秋葉原ラジオ会館4階 アニメショップ | Akihabara Radio Kaikan 4F Anime Shop",
+          "city": "Tokyo",
+          "area": "Chiyoda Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The 'embarrassing moment' where Kirino Kousaka is caught by her brother Kyosuke while secretly buying 'moe merchandise,' marking a turning point in their sibling relationship."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/efZcn6XAMhz4n5vHVKRPVvvBfJ2.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/ralocc.mp3"
+    },
+    {
+      "anime_name": "STEINS;GATE",
+      "anime_name_en": "STEINS;GATE",
+      "locations": [
+        {
+          "name": "秋葉原中央通り裏路地 | Akihabara Chuo-dori Alley",
+          "city": "Tokyo",
+          "area": "Chiyoda Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The place where Rintaro Okabe first uses the 'Phone Microwave' to send a 'D-Mail' and alter the past; the retro electronics stores in the alley echo the nostalgia of 'time travel.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/5zxePQEsUKLYDh2kpXGQAeInjUU.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/8yqtn1.mp3"
+    },
+    {
+      "anime_name": "名探偵コナン",
+      "anime_name_en": "Detective Conan",
+      "locations": [
+        {
+          "name": "東京タワー展望台 | Tokyo Tower Observation Deck",
+          "city": "Tokyo",
+          "area": "Minato Ward",
+          "transport_cost": 300,
+          "entry_fee": 1000,
+          "location_type": "Landmark Building",
+          "description": "The location of the first 'air duel' between Conan and Kaito Kid; Kid disguises himself as Shinichi and steals the 'blue gem' at the observation deck."
+        },
+        {
+          "name": "鎌倉極楽寺海岸 岩石瀬 | Kamakura Gokurakuji Beach Rock Bank",
+          "city": "Kamakura",
+          "area": "Kamakura City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where Conan and Ran discover 'mysterious footprints' on the rock bank while walking, providing key clues to solve the 'beach murder case.'"
+        },
+        {
+          "name": "通天閣 頂上展望台 | Tsutenkaku Top Observation Deck",
+          "city": "Osaka",
+          "area": "Naniwa Ward",
+          "transport_cost": 200,
+          "entry_fee": 700,
+          "location_type": "Landmark Building",
+          "description": "The place where Conan and Heiji Hattori solve the 'predicted murder case'; Heiji teases Conan in the Osaka dialect, showcasing the characteristics of a 'Kansai detective.'"
+        },
+        {
+          "name": "清水寺の舞台 | Kiyomizu-dera Stage",
+          "city": "Kyoto",
+          "area": "Higashiyama Ward",
+          "transport_cost": 200,
+          "entry_fee": 400,
+          "location_type": "Temple",
+          "description": "The place where Conan and Ran enjoy the Kyoto night view on the stage; Ran recalls the scene where Shinichi confesses, and the suspended structure of the stage enhances the romantic atmosphere."
+        },
+        {
+          "name": "春日大社 参道燈籠群 | Kasuga Taisha Path Lanterns",
+          "city": "Nara",
+          "area": "Nara City",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Shrine",
+          "description": "The place where Conan discovers 'fingerprints left by the culprit' among the lanterns; the warm light of the lanterns and the night atmosphere enhance the tension of 'suspenseful reasoning.'"
+        },
+        {
+          "name": "五稜郭公園 星形芝生 | Goryokaku Park Star Lawn",
+          "city": "Hokkaido",
+          "area": "Hakodate City",
+          "transport_cost": 500,
+          "entry_fee": 0,
+          "location_type": "Park",
+          "description": "The place where Conan and Heiji solve the 'star-shaped locked-room murder case'; the star-shaped structure of the lawn becomes the inspiration for the 'key case layout.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/ibd5jpPu2oxup9ecU8xvwlRZF0O.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/67u5sw.mp3"
+    },
+    {
+      "anime_name": "妖怪ウォッチ",
+      "anime_name_en": "Yo-kai Watch",
+      "locations": [
+        {
+          "name": "浅草仲見世通り 和菓子店 | Asakusa Nakamise Street Traditional Sweets Shop",
+          "city": "Tokyo",
+          "area": "Taito Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The place where Nathan Adams and 'Yokai' help the shop owner retrieve a 'lost secret recipe,' marking the start of their 'Yokai partner' adventure."
+        },
+        {
+          "name": "奈良公園 小鹿インタラクションエリア | Nara Park Deer Interaction Area",
+          "city": "Nara",
+          "area": "Nara City",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Park",
+          "description": "The place where Nathan Adams and 'Yokai' help a deer retrieve a 'lost bell'; the docile deer echo the theme of 'harmonious coexistence between humans and Yokai.'"
+        },
+        {
+          "name": "札幌市円山動物園 ペンギン館 | Sapporo Maruyama Zoo Penguin House",
+          "city": "Hokkaido",
+          "area": "Sapporo City",
+          "transport_cost": 200,
+          "entry_fee": 700,
+          "location_type": "Zoo",
+          "description": "The place where Nathan Adams and 'Penguin Yokai' help a baby penguin return to its parents; the snowy environment of the penguin house echoes the 'Hokkaido-specific Yokai' setting."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/qp6WV6NuX9Hg1NXThxbXvt1XbuF.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/wqonir.mp3"
+    },
+    {
+      "anime_name": "東京喰種トーキョーグール",
+      "anime_name_en": "Tokyo Ghoul",
+      "locations": [
+        {
+          "name": "新宿歌舞伎町 深夜の路地裏 | Kabukicho Late-Night Alley",
+          "city": "Tokyo",
+          "area": "Shinjuku Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The battlefield where Ken Kaneki first awakens his 'ghoul' abilities to avenge himself against 'Jason'; the dim lighting of the alley highlights the conflict between 'humanity and bestiality.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/1m4RlC9BTCbyY549TOdVQ5NRPcR.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/lkhvvb.mp3"
+    },
+    {
+      "anime_name": "NARUTO -ナルト-",
+      "anime_name_en": "Naruto",
+      "locations": [
+        {
+          "name": "東京アニメセンター NARUTOテーマ展示 | Tokyo Anime Center Naruto Theme Hall",
+          "city": "Tokyo",
+          "area": "Minato Ward",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Cultural Facility",
+          "description": "A 1:1 recreation of the 'Final Valley Duel' between Naruto and Sasuke; the 'Sharingan interactive device' in the hall echoes their 'fated bond.'"
+        },
+        {
+          "name": "ユニバーサル・スタジオ・ジャパン NARUTOテーマエリア | USJ Naruto Theme Area",
+          "city": "Osaka",
+          "area": "Konohana Ward",
+          "transport_cost": 300,
+          "entry_fee": 7980,
+          "location_type": "Theme Park",
+          "description": "A recreation of the 'Konohagakure Village' street and a 1:1 scene of the 'Final Valley Duel' between Naruto and Sasuke; visitors can experience the 'Rasengan' interactive device."
+        },
+        {
+          "name": "東大寺二月堂 回廊 | Todai-ji Nigatsu-do Corridor",
+          "city": "Nara",
+          "area": "Nara City",
+          "transport_cost": 200,
+          "entry_fee": 600,
+          "location_type": "Temple",
+          "description": "The place where Shikamaru Nara 'plans tactics' on the corridor and imitates the gesture of 'Shadow Imitation Jutsu'; the wooden structure of the corridor echoes the 'wisdom trait' of the Nara clan."
+        },
+        {
+          "name": "ファーム富田 ラベンダー畑 | Farm Tomita Lavender Field",
+          "city": "Hokkaido",
+          "area": "Furano City",
+          "transport_cost": 1500,
+          "entry_fee": 0,
+          "location_type": "Rural Scenery",
+          "description": "The place where Naruto undergoes 'senjutsu training' in the field; the purple lavender sea echoes the 'natural energy,' showcasing the 'integration of ninja and nature.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/e8oEUskH9bnF5WvHq7Lftkt1RXe.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/u11aw0.mp3"
+    },
+    {
+      "anime_name": "銀魂",
+      "anime_name_en": "Gintama",
+      "locations": [
+        {
+          "name": "両国国技館 相撲稽古場 | Ryogoku Kokugikan Sumo Training Ground",
+          "city": "Tokyo",
+          "area": "Sumida Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Landmark Building",
+          "description": "The funny scene where Gintoki disguises himself as a sumo wrestler to pay off 'Otae-san's debt' and duels with a 'grand champion-level yokai' at the training ground."
+        },
+        {
+          "name": "伏見桃山城跡 | Fushimi Momoyama Castle Ruins",
+          "city": "Kyoto",
+          "area": "Fushimi Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Castle Ruins",
+          "description": "The place where Gintoki and Toshiro Hijikata 'pretend to duel' but actually team up against the 'anti-foreigner faction'; the walls of the ruins serve as the background for their 'tacit cooperation.'"
+        },
+        {
+          "name": "洞爺湖温泉街 露天風呂 | Toya Lake Onsen Street Open-Air Bath",
+          "city": "Hokkaido",
+          "area": "Toyako Town",
+          "transport_cost": 1000,
+          "entry_fee": 1500,
+          "location_type": "Hot Spring Facility",
+          "description": "The place where Gintoki and Kagura soak in the hot spring and discuss 'how to deal with the anti-foreigner faction attack'; the steam of the hot spring and snow scenery showcase the contrast between 'daily life and battle.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/nx7eCCvOWR9m9dw6LPOGMvFkoZO.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/ftvkr9.mp3"
+    },
+    {
+      "anime_name": "ジョジョの奇妙な冒険",
+      "anime_name_en": "JoJo's Bizarre Adventure",
+      "locations": [
+        {
+          "name": "表参道ヒルズ 屋上庭園 | Omotesando Hills Rooftop Garden",
+          "city": "Tokyo",
+          "area": "Shibuya Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The place where Giorno Giovanna first reveals his 'Gold Experience' Stand ability by reviving an injured pigeon, establishing his goal to 'become a Gang-Star.'"
+        },
+        {
+          "name": "心斎橋筋商店街 古着屋 | Shinsaibashi-suji Vintage Clothing Store",
+          "city": "Osaka",
+          "area": "Chuo Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The place where Josuke Higashikata buys a 'vintage jacket' and is attacked by a 'Stand User'; he uses 'Crazy Diamond' to repair the clothes for the first time."
+        },
+        {
+          "name": "旭岳温泉スキー場 | Asahidake Onsen Ski Resort",
+          "city": "Hokkaido",
+          "area": "Kamikawa County",
+          "transport_cost": 2000,
+          "entry_fee": 2500,
+          "location_type": "Ski Resort",
+          "description": "The place where Jolyne Cujoh duels with a 'Stand User'; the speed of the ski board combines with the 'Stone Free' thread ability, showcasing the excitement of 'snow battle.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/ogAWwbh3frWtiTyyXrZaVFtqCgp.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/suziqw.mp3"
+    },
+    {
+      "anime_name": "鋼の錬金術師",
+      "anime_name_en": "Fullmetal Alchemist",
+      "locations": [
+        {
+          "name": "東京国立博物館 東洋館 | Tokyo National Museum Toyokan Gallery",
+          "city": "Tokyo",
+          "area": "Taito Ward",
+          "transport_cost": 200,
+          "entry_fee": 1000,
+          "location_type": "Museum",
+          "description": "The location where Edward and Alphonse Elric search for clues about the 'Philosopher's Stone'; the ancient alchemical manuscripts in the gallery echo their journey to 'restore their bodies.'"
+        },
+        {
+          "name": "大阪歴史博物館 古代錬金術展 | Osaka Museum of History Ancient Alchemy Exhibition",
+          "city": "Osaka",
+          "area": "Chuo Ward",
+          "transport_cost": 200,
+          "entry_fee": 600,
+          "location_type": "Museum",
+          "description": "The place where Edward and Alphonse Elric discover 'ancient alchemical array drawings,' providing key clues to solve the 'secret of the Philosopher's Stone.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/wfycxz.mp3"
+    },
+    {
+      "anime_name": "SLAM DUNK",
+      "anime_name_en": "SLAM DUNK",
+      "locations": [
+        {
+          "name": "鎌倉高校前駅 踏切 | Kamakura High School Station Crossing",
+          "city": "Kamakura",
+          "area": "Kamakura City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The classic scene where Hanamichi Sakuragi waves to Haruko and says 'I'm a genius'; the crossing and sea background have become a symbol of 'youthful passion.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/gpkM8VeiYyQuEg9qkAoNplktwe4.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/5d975q.mp3"
+    },
+    {
+      "anime_name": "海街diary",
+      "anime_name_en": "Our Little Sister",
+      "locations": [
+        {
+          "name": "由比ヶ浜 四姉妹の家 | Yuigahama Four Sisters' House",
+          "city": "Kamakura",
+          "area": "Kamakura City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Residential Area",
+          "description": "The place where Rin moves in with her sisters and eats 'plum rice' together for the first time; the Japanese-style courtyard and wooden corridor of the house carry the daily emotional adjustments of the four sisters."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/x9A0AtEg5EEYbDGfP8NqH3C9w8M.jpg",
+      "song_url": null
+    },
+    {
+      "anime_name": "ちはやふる",
+      "anime_name_en": "Chihayafuru",
+      "locations": [
+        {
+          "name": "鶴岡八幡宮 歌留多会 | Tsurugaoka Hachimangu Karuta Court",
+          "city": "Kamakura",
+          "area": "Kamakura City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Shrine",
+          "description": "The location where Chihaya Ayase and Arata Wataya play their first 'karuta match'; the ancient atmosphere of the shrine echoes the cultural theme of 'karuta inheritance.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/x1yYnCaK8gLnLgQSnd9IGoapHbx.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/rt3mrf.mp3"
+    },
+    {
+      "anime_name": "ハチミツとクローバー",
+      "anime_name_en": "Honey and Clover",
+      "locations": [
+        {
+          "name": "湘南海岸 ひまわり畑 | Shonan Coast Sunflower Field",
+          "city": "Kamakura",
+          "area": "Fujisawa City",
+          "transport_cost": 400,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where Takemoto Yuuta and Hagu paint in the field; Hagu shows her artistic talent, marking the start of their ambiguous feelings."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/kswS6bL0EbxW2ryWL7sXMyMT2EV.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/z0mmw7.mp3"
+    },
+    {
+      "anime_name": "サマータイムレンダ",
+      "anime_name_en": "Summer Time Rendering",
+      "locations": [
+        {
+          "name": "由比ヶ浜 海の家 | Yuigahama Beach Hut",
+          "city": "Kamakura",
+          "area": "Kamakura City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where Shinpei Ajiro returns to his hometown and reunites with Ushio Kofune at the hut, marking the first discovery of the 'time loop' anomaly."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/m9e7chRW8Q8Go1Dv00RCUHbMoNe.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/fk2kfw.mp3"
+    },
+    {
+      "anime_name": "スキップとローファー",
+      "anime_name_en": "Skip and Loafer",
+      "locations": [
+        {
+          "name": "鎌倉小町通り 古書店 | Kamakura Komachi-dori Old Bookstore",
+          "city": "Kamakura",
+          "area": "Kamakura City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The place where Mitsumi Iwakura helps a classmate find an out-of-print reference book and meets Saki Takamine at the bookstore, showcasing her 'warm-hearted personality.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/xHVy0gnLNpkNAdtd3DHsUVYYEDN.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/ymcln6.mp3"
+    },
+    {
+      "anime_name": "ルパン三世",
+      "anime_name_en": "Lupin the Third",
+      "locations": [
+        {
+          "name": "箱根芦ノ湖 湖畔キャンプ場 | Lake Ashi Lakeside Campsite",
+          "city": "Kamakura",
+          "area": "Hakone City",
+          "transport_cost": 1000,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where Lupin and Jigen camp and plan to 'steal the treasure of Lake Ashi'; their conversation by the campfire showcases their 'partner friendship.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/eiyGSiIlDXd4CXrwlMwjWko2fGi.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/gs8tss.mp3"
+    },
+    {
+      "anime_name": "神様はじめました",
+      "anime_name_en": "Kamisama Kiss",
+      "locations": [
+        {
+          "name": "長谷寺 裏山桜の坂 | Hase-dera Mountain Cherry Slope",
+          "city": "Kamakura",
+          "area": "Kamakura City",
+          "transport_cost": 300,
+          "entry_fee": 300,
+          "location_type": "Temple",
+          "description": "The emotional climax where Nanami Momozono makes a wish to 'sacrifice herself' to save Tomoe on the cherry slope; Tomoe regains his memories as cherry blossoms fall."
+        },
+        {
+          "name": "三室戸寺 藤棚 | Murodo-dera Wisteria Trellis",
+          "city": "Uji",
+          "area": "Uji City",
+          "transport_cost": 200,
+          "entry_fee": 300,
+          "location_type": "Temple",
+          "description": "The place where Nanami and Tomoe make a wish to 'be together forever'; Tomoe regains his 'shrine god messenger' identity as wisteria flowers fall, marking the happy ending of their relationship."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/5E7GL8KxpFemEFl3Lv8Fu4RuSwa.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/po6mdk.mp3"
+    },
+    {
+      "anime_name": "昭和元禄落語心中",
+      "anime_name_en": "Showa Genroku Rakugo Shinju",
+      "locations": [
+        {
+          "name": "鎌倉小動町 旧芝居小屋 | Kamakura Komachi Old Kabuki Stage",
+          "city": "Kamakura",
+          "area": "Kamakura City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Cultural Heritage",
+          "description": "The place where Yakumo Yurakutei first teaches Sukeroku 'rakugo'; the wooden stage and red curtains of the theater carry the core theme of 'rakugo inheritance.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/93Lm7iMKwAXEpYzBlFcSvXBvaCf.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/fn78g2.mp3"
+    },
+    {
+      "anime_name": "クレヨンしんちゃん",
+      "anime_name_en": "Crayon Shin-chan",
+      "locations": [
+        {
+          "name": "大阪城公園 西の丸庭園 | Osaka Castle Park Nishi-no-maru Garden",
+          "city": "Osaka",
+          "area": "Chuo Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Park",
+          "description": "The funny scene where the Nohara family travels to Osaka, eats 'takoyaki' in the garden, and Shin-chan imitates Osaka dialect, full of local charm."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/zL7zV68jIpq2IBOtlK38mlwfgI9.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/t7gxt5.mp3"
+    },
+    {
+      "anime_name": "ドラゴンボール",
+      "anime_name_en": "Dragon Ball",
+      "locations": [
+        {
+          "name": "大阪城天守閣 展示ホール | Osaka Castle Tenshu Pavilion Exhibition Hall",
+          "city": "Osaka",
+          "area": "Chuo Ward",
+          "transport_cost": 200,
+          "entry_fee": 600,
+          "location_type": "Landmark Building",
+          "description": "The funny scene where Goku and Krillin visit Osaka Castle before the 'World Martial Arts Tournament'; Goku mistakes the Tenshu Pavilion for a 'martial arts dojo.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/i1lMlxir5E4jyeLlqS2bK1Cn3Tt.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/ekr3fo.mp3"
+    },
+    {
+      "anime_name": "デジモンアドベンチャー",
+      "anime_name_en": "Digimon Adventure",
+      "locations": [
+        {
+          "name": "大阪ドーム | Osaka Dome",
+          "city": "Osaka",
+          "area": "Naniwa Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Landmark Building",
+          "description": "The battlefield where the DigiDestined fight against 'Ultimate-level Digimon' at the Osaka Dome; Taichi's Agumon evolves into 'WarGreymon' here."
+        },
+        {
+          "name": "札幌ドーム | Sapporo Dome",
+          "city": "Hokkaido",
+          "area": "Sapporo City",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Landmark Building",
+          "description": "The place where the DigiDestined first meet the 'Royal Knights'; the open space of the football field serves as the key battlefield for 'Digimon evolution,' and the dome's ceiling simulates the 'Digimon World entrance.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/7Qspx2eFX0uBSQLLlAKnYrjZgse.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/u3ufrj.mp3"
+    },
+    {
+      "anime_name": "進撃の巨人",
+      "anime_name_en": "Attack on Titan",
+      "locations": [
+        {
+          "name": "道頓堀 グリコサイン下 | Dotonbori Glico Sign Street",
+          "city": "Osaka",
+          "area": "Chuo Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The place where the Survey Corps trains in a 'simulated city'; Eren Yeager first reveals his 'hardening ability,' and the lights of the Glico sign simulate the tense atmosphere of 'Titan attacks.'"
+        },
+        {
+          "name": "美瑛 青い池と白樺林 | Biei Aoiike Pond and Birch Forest",
+          "city": "Hokkaido",
+          "area": "Biei Town",
+          "transport_cost": 1000,
+          "entry_fee": 0,
+          "location_type": "Natural Scenery",
+          "description": "The place where the Survey Corps simulates a 'Titan attack'; Eren's 'hardening ability' takes effect under the cover of the birch forest, and the blue water of Aokike Pond enhances the tense atmosphere of 'survival.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/9zsvqm.mp3"
+    },
+    {
+      "anime_name": "食戟のソーマ",
+      "anime_name_en": "Food Wars! Shokugeki no Soma",
+      "locations": [
+        {
+          "name": "道頓堀 たこ焼き屋台 | Dotonbori Takoyaki Stall",
+          "city": "Osaka",
+          "area": "Chuo Ward",
+          "transport_cost": 200,
+          "entry_fee": 500,
+          "location_type": "Commercial Area",
+          "description": "The place where Soma Yukihira comes to Osaka to learn 'street food' and competes with the stall owner in 'takoyaki making,' showcasing his concept of 'innovative cuisine.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/drteIrKPh0qaTYitGkxAOKoidsR.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/dtbgrd.mp3"
+    },
+    {
+      "anime_name": "犬夜叉",
+      "anime_name_en": "Inuyasha",
+      "locations": [
+        {
+          "name": "西陣織会館 織物工房 | Nishijin Textile Center Tapestry Workshop",
+          "city": "Kyoto",
+          "area": "Kamigyo Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Cultural Facility",
+          "description": "The place where Kagome Higurashi searches for 'Shikon Jewel shards' and discovers a 'yokai pattern' on the tapestry, leading her to track 'Jaken.'"
+        },
+        {
+          "name": "宇治橋 中央展望台 | Uji Bridge Central Observation Deck",
+          "city": "Uji",
+          "area": "Uji City",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where Kagome and Inuyasha search for 'Shikon Jewel shards'; the shards glow in the sun, and the ancient style of the bridge echoes the 'Sengoku-era' setting."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/jgvW9n0EwKtq9nbztWhyTvvoqjS.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/e3h6t7.mp3"
+    },
+    {
+      "anime_name": "響け!ユーフォニアム",
+      "anime_name_en": "Sound! Euphonium",
+      "locations": [
+        {
+          "name": "伏見稲荷大社 山道 | Fushimi Inari Taisha Mountain Path",
+          "city": "Kyoto",
+          "area": "Fushimi Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Shrine",
+          "description": "The place where Kumiko Oumae and Reina Kousaka practice playing their instruments on the mountain path; Reina encourages Kumiko to 'pursue her musical dream' in a key conversation."
+        },
+        {
+          "name": "宇治川 河川敷 | Uji River Bank",
+          "city": "Uji",
+          "area": "Uji City",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where the Kitauji High School Concert Band holds 'pre-competition training'; Kumiko's euphonium and Reina's trumpet play in harmony, with the sound of the river serving as a natural accompaniment."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/l0hKrx6PjQRrHiMzK2Fanen2xbL.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/qagnrc.mp3"
+    },
+    {
+      "anime_name": "中二病でも恋がしたい!",
+      "anime_name_en": "Love, Chunibyo & Other Delusions!",
+      "locations": [
+        {
+          "name": "京都国際マンガミュージアム 閲覧室 | Kyoto International Manga Museum Reading Room",
+          "city": "Kyoto",
+          "area": "Nakagyo Ward",
+          "transport_cost": 200,
+          "entry_fee": 800,
+          "location_type": "Museum",
+          "description": "The place where Yuuta Takanashi and Rikka Takanashi borrow 'chunibyo manga'; Yuuta accidentally says the 'Dark Flame' line, revealing his past chunibyo identity."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/1IapEqydEiGO0gCgBPVexTFbUCS.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/ofy3iq.mp3"
+    },
+    {
+      "anime_name": "千と千尋の神隠し",
+      "anime_name_en": "Spirited Away",
+      "locations": [
+        {
+          "name": "嵐山 渡月橋畔 | Arashiyama Togetsukyo Bridge Bank",
+          "city": "Kyoto",
+          "area": "Ukyo Ward",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The prototype location where Chihiro and Haku cross the 'water plain' by train; the ancient style of Togetsukyo Bridge and the reflection of the river echo the mysterious atmosphere of the 'spirit world entrance.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/q2lwec.mp3"
+    },
+    {
+      "anime_name": "るろうに剣心",
+      "anime_name_en": "Rurouni Kenshin",
+      "locations": [
+        {
+          "name": "伏見稲荷大社 千本鳥居 | Fushimi Inari Taisha Thousand Torii Gates",
+          "city": "Kyoto",
+          "area": "Fushimi Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Shrine",
+          "description": "The place where Kenshin Himura duels with Saito Hajime among the torii gates; Kenshin uses 'Hiten Mitsurugi-ryu' to dodge attacks, and the red silhouette of the torii gates enhances the tragic sense of 'samurai spirit.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/zT77Y6iQGmYGBqbhQi0ySD60o9i.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/7bmfnw.mp3"
+    },
+    {
+      "anime_name": "ヴァイオレット・エヴァーガーデン",
+      "anime_name_en": "Violet Evergarden",
+      "locations": [
+        {
+          "name": "京都府立陶板名画の庭 | Kyoto Prefectural Garden of Fine Arts",
+          "city": "Kyoto",
+          "area": "Kita Ward",
+          "transport_cost": 200,
+          "entry_fee": 900,
+          "location_type": "Museum",
+          "description": "The place where Violet Evergarden writes a letter for a 'mother who lost her child'; the ceramic murals and sunlight in the gallery echo the theme of 'healing and growth.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/61EwFPqc0r1uJo6la49J55F8bQ8.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/5adibs.mp3"
+    },
+    {
+      "anime_name": "氷菓",
+      "anime_name_en": "Hyouka",
+      "locations": [
+        {
+          "name": "京都大学 百周年時計台記念館前 | Kyoto University Centennial Clock Tower Memorial Hall Plaza",
+          "city": "Kyoto",
+          "area": "Sakyo Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Campus",
+          "description": "The place where Houtarou Oreki and Eru Chitanda discuss the 'Classic Literature Club mystery'; Eru says her classic line 'I'm curious' when the clock tower chimes."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/qoAig2n9LkukqnizytaBtOSwif7.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/yscax2.mp3"
+    },
+    {
+      "anime_name": "境界の彼方",
+      "anime_name_en": "Beyond the Boundary",
+      "locations": [
+        {
+          "name": "鴨川 桜の土手 | Kamogawa River Cherry Bank",
+          "city": "Kyoto",
+          "area": "Higashiyama Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where Mirai Kuriyama and Akihito Kanbara make a promise to 'protect the world together'; Mirai reveals her 'blood blade' ability as cherry blossoms fall, marking a turning point in their relationship."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/6cmtMbEZAYm3aWzthFRk6048LFi.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/2ud98beifag9cnya.mp3"
+    },
+    {
+      "anime_name": "鬼滅の刃",
+      "anime_name_en": "Demon Slayer: Kimetsu no Yaiba",
+      "locations": [
+        {
+          "name": "柳生町 天乃石立神社 石燈籠陣 | Yagyu-cho Tatenokizashi Shrine Lantern Array",
+          "city": "Nara",
+          "area": "Nara City",
+          "transport_cost": 300,
+          "entry_fee": 0,
+          "location_type": "Shrine",
+          "description": "The place where Tanjiro purifies a 'demon possessing the stone lanterns'; the light of the stone lanterns and the glow of the 'Nichirin Sword' echo the theme of 'justice and redemption.'"
+        },
+        {
+          "name": "道頓堀 蟹道楽本店 | Dotonbori Kani Doraku Main Store",
+          "city": "Osaka",
+          "area": "Chuo Ward",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Commercial Area",
+          "description": "The place where Tanjiro, Zenitsu, and Inosuke track 'man-eating demons' in Osaka; Zenitsu is distracted by the Kani Doraku sign, almost delaying the mission."
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/fWVSwgjpT2D78VUh6X8UBd2rorW.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/1uhrww.mp3"
+    },
+    {
+      "anime_name": "ドラえもん",
+      "anime_name_en": "Doraemon",
+      "locations": [
+        {
+          "name": "奈良市立図書館 児童図書エリア | Nara City Library Children's Reading Area",
+          "city": "Nara",
+          "area": "Nara City",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Cultural Facility",
+          "description": "The funny scene where Nobita and Doraemon borrow 'Memory Bread' here; Nobita accidentally sticks the bread to a picture book, causing 'characters in the book to come to life.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/bHMqPDsW7Lb71CVHXq4PuEvQ4NY.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/4cvwyp.mp3"
+    },
+    {
+      "anime_name": "けいおん!",
+      "anime_name_en": "K-On!",
+      "locations": [
+        {
+          "name": "平等院鳳凰堂 庭園 | Byodoin Phoenix Hall Garden",
+          "city": "Uji",
+          "area": "Uji City",
+          "transport_cost": 200,
+          "entry_fee": 600,
+          "location_type": "Temple",
+          "description": "The place where the Light Music Club members take 'school festival promotional photos'; the golden roof of Phoenix Hall and the pond reflection become a classic background in the MV of 'ふわふわ時間 (Fuwa Fuwa Time).'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/3hSyhYRettcDOQrY3jPlceLcUMo.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/945c88.mp3"
+    },
+    {
+      "anime_name": "源氏物語",
+      "anime_name_en": "The Tale of Genji",
+      "locations": [
+        {
+          "name": "宇治上神社 古文書展示 | Uji Kamigami Shrine Ancient Document Exhibition",
+          "city": "Uji",
+          "area": "Uji City",
+          "transport_cost": 200,
+          "entry_fee": 0,
+          "location_type": "Shrine",
+          "description": "The place where Kaoru (Genji's son) reads 'Princess Uji's diary'; the ancient books and lighting in the exhibition area echo the elegant atmosphere of the 'Heian-era love tragedy.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/jg2ineZdPsqN0oRtCMdNnDgabCn.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/itemot.mp3"
+    },
+    {
+      "anime_name": "ゴールデンカムイ",
+      "anime_name_en": "Golden Kamuy",
+      "locations": [
+        {
+          "name": "北海道開拓の村 | Hokkaido Kaitaku Mura (Historic Village of Hokkaido)",
+          "city": "Hokkaido",
+          "area": "Sapporo City Atsubetsu Ward",
+          "transport_cost": 300,
+          "entry_fee": 800,
+          "location_type": "Open-Air Museum",
+          "description": "The place where Saichi Sugimoto and Asirpa investigate 'gold clues'; the wooden houses and snow scenery of the retro street recreate the ruggedness of the 'Hokkaido development era.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/KjatL82mrWDogOlswIxwdrpe2n.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/141boj.mp3"
+    },
+    {
+      "anime_name": "SHIROBAKO",
+      "anime_name_en": "SHIROBAKO",
+      "locations": [
+        {
+          "name": "小樽運河 倉庫群 | Otaru Canal Warehouse Group",
+          "city": "Hokkaido",
+          "area": "Otaru City",
+          "transport_cost": 400,
+          "entry_fee": 0,
+          "location_type": "Outdoor Attraction",
+          "description": "The place where the animation production team films scenes for 'Third Aerial Girls' Squad'; the red bricks of the warehouses and the canal reflection echo the theme of 'anime staff's passion and perseverance.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/boxBWiZ1NxVLLkoCPbP2NKdv1WT.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/0zsnot.mp3"
+    },
+    {
+      "anime_name": "四月は君の嘘",
+      "anime_name_en": "Your Lie in April",
+      "locations": [
+        {
+          "name": "札幌藻岩山展望台 | Sapporo Moiwayama Observation Deck",
+          "city": "Hokkaido",
+          "area": "Sapporo City Minami Ward",
+          "transport_cost": 300,
+          "entry_fee": 720,
+          "location_type": "Natural Scenery",
+          "description": "The place where Kousei Arima and Kaori Miyazono enjoy the night view; Kaori encourages Kousei to 'play the piano again,' and the night lights and piano music echo the theme of 'music and redemption.'"
+        }
+      ],
+      "image_url": "https://image.tmdb.org/t/p/w500/rRjfH3ckTYz8z8aSkJshFL4VyK9.jpg",
+      "song_url": "https://naedist.animemusicquiz.com/d3oasy.mp3"
+    }
+  ]
+}
